@@ -1,0 +1,80 @@
+*, *::after, *::before { 
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 4rem);
+    grid-template-rows: 12rem 7rem 10rem;
+    gap: 3rem;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  
+  .deck {
+    height: 120%;
+    width: 120%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: .5rem;
+    color: white;
+    user-select: none;
+  }
+  
+  .computer-deck {
+    background-color: orange
+  }
+  
+  .player-deck {
+    background-color: black
+  }
+  
+  .text {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    position: relative;
+    height: 120%;
+    width: 120%;
+    border: 5px dotted black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  .card.red {
+    color:orange;
+  }
+  
+  .card.black {
+    color: black;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1rem;
+  }
+  
+  .card::before {
+    top: rem;
+    left: .5rem
+  }
+  
+  .card::after {
+    bottom: .5rem;
+    right: .5rem;
+
+  }
